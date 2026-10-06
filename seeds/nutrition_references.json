@@ -1,0 +1,222 @@
+[
+    {
+        "id": "kemenkes_akg_2019",
+        "label": "Peraturan Menteri Kesehatan RI No. 28 Tahun 2019 tentang Angka Kecukupan Gizi yang Dianjurkan untuk Masyarakat Indonesia",
+        "short_label": "AKG Kemenkes 2019",
+        "url": "https://peraturan.bpk.go.id/Details/138621/permenkes-no-28-tahun-2019",
+        "category": "government",
+        "year": 2019,
+        "version": "2019",
+        "effective_date": "2019-08-01",
+        "superseded_by": null
+    },
+    {
+        "id": "who_sugar_2015",
+        "label": "WHO Guideline: Sugars Intake for Adults and Children (2015)",
+        "short_label": "WHO Sugar Guideline 2015",
+        "url": "https://www.who.int/publications/i/item/9789241549028",
+        "category": "international",
+        "year": 2015,
+        "version": "2015",
+        "effective_date": "2015-03-04",
+        "superseded_by": null
+    },
+    {
+        "id": "bmj_sugar_2023",
+        "label": "BMJ 2023: Dietary Sugar Consumption and Health — Umbrella Review",
+        "short_label": "BMJ Sugar Review 2023",
+        "url": "https://www.bmj.com/content/381/bmj-2022-071609",
+        "category": "journal",
+        "year": 2023,
+        "version": "2023",
+        "effective_date": "2023-04-05",
+        "superseded_by": null
+    },
+    {
+        "id": "springer_ssb_2026",
+        "label": "Springer 2026: Sugar-Sweetened Beverages and Cardiometabolic Risk",
+        "short_label": "Springer SSB 2026",
+        "url": "https://link.springer.com/",
+        "category": "journal",
+        "year": 2026,
+        "version": "2026",
+        "effective_date": "2026-01-15",
+        "superseded_by": null
+    },
+    {
+        "id": "jacc_sodium_2025",
+        "label": "JACC 2025: Dietary Sodium and Cardiovascular Disease — Systematic Review",
+        "short_label": "JACC Sodium 2025",
+        "url": "https://www.jacc.org/",
+        "category": "journal",
+        "year": 2025,
+        "version": "2025",
+        "effective_date": "2025-06-01",
+        "superseded_by": null
+    },
+    {
+        "id": "who_sodium_2025",
+        "label": "WHO 2025: Guideline on Sodium Intake for Adults and Children",
+        "short_label": "WHO Sodium 2025",
+        "url": "https://www.who.int/publications/i/item/9789240037342",
+        "category": "international",
+        "year": 2025,
+        "version": "2025",
+        "effective_date": "2025-01-15",
+        "superseded_by": null
+    },
+    {
+        "id": "kemenkes_sodium",
+        "label": "Permenkes RI: Batas Konsumsi Natrium Harian (2000 mg)",
+        "short_label": "Kemenkes Sodium",
+        "url": "https://peraturan.bpk.go.id/",
+        "category": "government",
+        "year": 2019,
+        "version": "2019",
+        "effective_date": "2019-08-01",
+        "superseded_by": null
+    },
+    {
+        "id": "fda_caffeine",
+        "label": "FDA: Spilling the Beans — How Much Caffeine Is Too Much?",
+        "short_label": "FDA Caffeine Guideline",
+        "url": "https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much",
+        "category": "government",
+        "year": 2023,
+        "version": "2023",
+        "effective_date": "2023-01-01",
+        "superseded_by": null
+    },
+    {
+        "id": "efsa_caffeine",
+        "label": "EFSA: Scientific Opinion on the Safety of Caffeine (2015)",
+        "short_label": "EFSA Caffeine 2015",
+        "url": "https://www.efsa.europa.eu/en/efsajournal/pub/4102",
+        "category": "international",
+        "year": 2015,
+        "version": "2015",
+        "effective_date": "2015-05-27",
+        "superseded_by": null
+    },
+    {
+        "id": "ijerph_caffeine_2025",
+        "label": "IJERPH 2025: Caffeine Tolerance and Withdrawal — Review",
+        "short_label": "IJERPH Caffeine 2025",
+        "url": "https://www.mdpi.com/journal/ijerph",
+        "category": "journal",
+        "year": 2025,
+        "version": "2025",
+        "effective_date": "2025-03-01",
+        "superseded_by": null
+    },
+    {
+        "id": "bmj_caffeine_2015",
+        "label": "BMJ 2015: Caffeine Consumption and Sleep Quality",
+        "short_label": "BMJ Caffeine 2015",
+        "url": "https://www.bmj.com/",
+        "category": "journal",
+        "year": 2015,
+        "version": "2015",
+        "effective_date": "2015-09-01",
+        "superseded_by": null
+    },
+    {
+        "id": "who_saturated_fat",
+        "label": "WHO: Saturated Fatty Acid and Trans-Fatty Acid Intake for Adults and Children",
+        "short_label": "WHO Saturated Fat Guideline",
+        "url": "https://www.who.int/publications/i/item/9789240057302",
+        "category": "international",
+        "year": 2023,
+        "version": "2023",
+        "effective_date": "2023-07-15",
+        "superseded_by": null
+    },
+    {
+        "id": "acc_sfa_2026",
+        "label": "ACC 2026: Reducing Saturated Fat and Cardiovascular Outcomes",
+        "short_label": "ACC SFA 2026",
+        "url": "https://www.acc.org/",
+        "category": "journal",
+        "year": 2026,
+        "version": "2026",
+        "effective_date": "2026-03-01",
+        "superseded_by": null
+    },
+    {
+        "id": "aha_sfa_2025",
+        "label": "AHA 2025: Dietary Fats and Cardiovascular Disease — Advisory",
+        "short_label": "AHA SFA 2025",
+        "url": "https://www.heart.org/",
+        "category": "journal",
+        "year": 2025,
+        "version": "2025",
+        "effective_date": "2025-06-15",
+        "superseded_by": null
+    },
+    {
+        "id": "fao_who_unu_2004",
+        "label": "FAO/WHO/UNU Expert Consultation on Human Energy Requirements (2004)",
+        "short_label": "FAO/WHO/UNU 2004",
+        "url": "https://www.fao.org/4/y5686e/y5686e00.htm",
+        "category": "international",
+        "year": 2004,
+        "version": "2004",
+        "effective_date": "2004-10-17",
+        "superseded_by": null
+    },
+    {
+        "id": "efsa_pal_2013",
+        "label": "EFSA 2013: Scientific Opinion on Dietary Reference Values for Energy",
+        "short_label": "EFSA PAL 2013",
+        "url": "https://www.efsa.europa.eu/en/efsajournal/pub/3005",
+        "category": "international",
+        "year": 2013,
+        "version": "2013",
+        "effective_date": "2013-01-15",
+        "superseded_by": null
+    },
+    {
+        "id": "who_physical_activity_2020",
+        "label": "WHO 2020: Guidelines on Physical Activity and Sedentary Behaviour",
+        "short_label": "WHO Physical Activity 2020",
+        "url": "https://www.who.int/publications/i/item/9789240015128",
+        "category": "international",
+        "year": 2020,
+        "version": "2020",
+        "effective_date": "2020-11-25",
+        "superseded_by": null
+    },
+    {
+        "id": "singapore_food_regs_2023",
+        "label": "Singapore Food Regulations: Nutri-Grade Requirements (Reg 184B-184D)",
+        "short_label": "Singapore Nutri-Grade",
+        "url": "https://sso.agc.gov.sg/SL/SFA1999-RG1",
+        "category": "government",
+        "year": 2023,
+        "version": "2023",
+        "effective_date": "2023-12-30",
+        "superseded_by": null
+    },
+    {
+        "id": "sante_publique_france_2024",
+        "label": "Santé Publique France 2024: Nutri-Score Update — Arrêté du 14 mars 2025",
+        "short_label": "Nutri-Score EU 2024",
+        "url": "https://www.santepubliquefrance.fr/",
+        "category": "government",
+        "year": 2024,
+        "version": "2024",
+        "effective_date": "2024-01-01",
+        "superseded_by": null
+    },
+    {
+        "id": "nature_food_2024",
+        "label": "Nature Food 2024: Nutri-Score Algorithm Update Validation",
+        "short_label": "Nature Food 2024",
+        "url": "https://www.nature.com/natfood/",
+        "category": "journal",
+        "year": 2024,
+        "version": "2024",
+        "effective_date": "2024-02-01",
+        "superseded_by": null
+    }
+]
