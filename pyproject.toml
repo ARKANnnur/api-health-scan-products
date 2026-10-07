@@ -5,7 +5,7 @@ description = "NUTRI-101 Backend - FastAPI modular project"
 authors = [
     {name = "heavenly demon", email = "darkannur@gmail.com"}
 ]
-requires-python = "^3.12"
+requires-python = ">=3.12"
 dependencies = [
     "fastapi (>=0.115.0,<0.120.0)",
     "uvicorn[standard] (>=0.32.0,<0.40.0)",
@@ -16,7 +16,9 @@ dependencies = [
     "asyncpg (>=0.30.0,<0.31.0)",
     "structlog (>=24.4.0,<26.0.0)",
     "httpx (>=0.28.0,<0.30.0)",
-    "python-jose[cryptography] (>=3.3.0,<4.0.0)",
+    "pyjwt[crypto] (>=2.8.0,<3.0.0)",
+    "cryptography (>=42.0.0,<51.0.0)",
+    "email-validator (>=2.3.0,<3.0.0)",
 ]
 
 [project.optional-dependencies]
@@ -51,7 +53,11 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "N", "W", "UP", "B", "C4", "SIM"]
-ignore = ["E501"]
+ignore = ["E501", "B008", "N818", "UP046"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*" = ["E402"]
+"app/db/migrations/*" = ["W291", "SIM103"]
 
 [tool.black]
 line-length = 100

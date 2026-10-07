@@ -1,5 +1,4 @@
 import pytest
-from pydantic import ValidationError
 
 from app.core.config import Settings
 from app.main import _resolve_cors_origins, _validate_cors_failsafe

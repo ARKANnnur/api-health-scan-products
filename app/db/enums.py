@@ -1,22 +1,13 @@
-"""Enum definitions untuk schema NUTRI-103.
-
-Semua enum ini di-mirror di Postgres sebagai native ENUM types.
-Di-mapping ke SQLAlchemy pakai `sa.Enum(EnumClass, name="enum_name")`.
-
-Decision: portion_unit legacy DIHAPUS. Single source of truth = 
-measurement_type + container_type + container_size.
-"""
-
 from enum import StrEnum
 
 
 class AgeGroup(StrEnum):
     """Kelompok umur untuk kalkulasi daily limits."""
 
-    CHILD_SCHOOL = "CHILD_SCHOOL"    # 7-12 tahun
-    TEEN = "TEEN"                     # 13-17 tahun
-    YOUNG_ADULT = "YOUNG_ADULT"       # 18-39 tahun
-    MATURE_ELDER = "MATURE_ELDER"     # 40+ tahun
+    CHILD_SCHOOL = "CHILD_SCHOOL"  # 7-12 tahun
+    TEEN = "TEEN"  # 13-17 tahun
+    YOUNG_ADULT = "YOUNG_ADULT"  # 18-39 tahun
+    MATURE_ELDER = "MATURE_ELDER"  # 40+ tahun
 
 
 class ConsumptionType(StrEnum):

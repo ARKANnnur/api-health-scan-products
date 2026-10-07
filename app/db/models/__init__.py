@@ -7,6 +7,7 @@ from app.db.models.nutrition_reference import NutritionReference
 from app.db.models.portion_reference import PortionReference
 from app.db.models.profile import Profile
 from app.db.models.scanned_product import ScannedProduct
+from app.db.models.user_session import UserSession
 
 __all__ = [
     "ConsentLog",
@@ -17,5 +18,6 @@ __all__ = [
     "PortionReference",
     "Profile",
     "ScannedProduct",
+    "UserSession",
     "auth_users",
 ]

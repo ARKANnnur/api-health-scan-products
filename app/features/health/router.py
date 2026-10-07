@@ -1,6 +1,6 @@
 from fastapi import APIRouter, status
-from fastapi.responses import JSONResponse
 
+from app.core.exceptions import DatabaseError
 from app.features.health.schemas import HealthResponse, ReadinessResponse
 from app.features.health.service import check_database
 from app.shared.deps import DBDep
@@ -29,11 +29,8 @@ async def healthz() -> HealthResponse:
         503: {"description": "DB down"},
     },
 )
-async def readyz(db: DBDep) -> JSONResponse | ReadinessResponse:  
+async def readyz(db: DBDep) -> ReadinessResponse:
     db_ok = await check_database(db)
     if not db_ok:
-        return JSONResponse(
-            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-            content={"status": "not_ready", "database": "down"},
-        )
+        raise DatabaseError(message="Database is not ready")
     return ReadinessResponse(status="ready", database="up")

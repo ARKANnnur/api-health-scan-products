@@ -31,7 +31,7 @@ class PaginatedResponse(BaseModel, Generic[T]):
 class ErrorDetail(BaseModel):
     code: str
     message: str
-    details: dict[str, Any] = Field(default_factory=dict)  
+    details: dict[str, Any] = Field(default_factory=dict)
 
 
 class ErrorResponse(BaseModel):

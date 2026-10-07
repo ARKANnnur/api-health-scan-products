@@ -9,6 +9,7 @@ from app.core.config import Settings, get_settings
 from app.core.exceptions import AppException
 from app.core.logging import RequestLoggingMiddleware, configure_logging
 from app.db.session import dispose_engine
+from app.features.auth import router as auth_router
 from app.features.health import router as health_router
 
 VERSION = "1.0.0"
@@ -51,9 +52,7 @@ def _register_exception_handlers(app: FastAPI) -> None:
     """AC-9: format error konsisten."""
 
     @app.exception_handler(AppException)
-    async def app_exception_handler(
-        request: Request, exc: AppException
-    ) -> JSONResponse:
+    async def app_exception_handler(request: Request, exc: AppException) -> JSONResponse:
         return JSONResponse(
             status_code=exc.status_code,
             content={
@@ -66,9 +65,7 @@ def _register_exception_handlers(app: FastAPI) -> None:
         )
 
     @app.exception_handler(Exception)
-    async def generic_exception_handler(
-        request: Request, exc: Exception
-    ) -> JSONResponse:
+    async def generic_exception_handler(request: Request, exc: Exception) -> JSONResponse:
         # TC-101-14: tidak expose stack trace
         return JSONResponse(
             status_code=500,
@@ -113,6 +110,7 @@ def create_app() -> FastAPI:
     _register_exception_handlers(app)
 
     app.include_router(health_router)
+    app.include_router(auth_router)
 
     return app
 

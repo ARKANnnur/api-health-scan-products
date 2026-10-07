@@ -50,10 +50,11 @@ class AuthorizationError(AppException):
     def __init__(
         self,
         message: str = "Not authorized",
+        code: str = "AUTHORIZATION_ERROR",
         details: dict[str, Any] | None = None,
     ) -> None:
         super().__init__(
-            code="AUTHORIZATION_ERROR",
+            code=code,
             message=message,
             status_code=403,
             details=details,
@@ -82,6 +83,48 @@ class DatabaseError(AppException):
     ) -> None:
         super().__init__(
             code="DATABASE_ERROR",
+            message=message,
+            status_code=503,
+            details=details,
+        )
+
+
+class ConflictError(AppException):
+    def __init__(
+        self,
+        message: str = "Conflict",
+        details: dict[str, Any] | None = None,
+    ) -> None:
+        super().__init__(
+            code="CONFLICT",
+            message=message,
+            status_code=409,
+            details=details,
+        )
+
+
+class RateLimitError(AppException):
+    def __init__(
+        self,
+        message: str = "Too many requests",
+        details: dict[str, Any] | None = None,
+    ) -> None:
+        super().__init__(
+            code="TOO_MANY_REQUESTS",
+            message=message,
+            status_code=429,
+            details=details,
+        )
+
+
+class ExternalServiceError(AppException):
+    def __init__(
+        self,
+        message: str = "External service unavailable",
+        details: dict[str, Any] | None = None,
+    ) -> None:
+        super().__init__(
+            code="EXTERNAL_SERVICE_ERROR",
             message=message,
             status_code=503,
             details=details,

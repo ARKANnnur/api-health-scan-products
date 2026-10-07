@@ -3,6 +3,7 @@ from typing import Any
 from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
         env_file=".env",
@@ -27,6 +28,8 @@ class Settings(BaseSettings):
     # App
     ENV: str = "dev"
     CORS_ORIGINS: list[str] = []
+    # Consent
+    CURRENT_DISCLAIMER_VERSION: str = "v1.0"
 
     @field_validator("SUPABASE_URL")
     @classmethod
@@ -35,6 +38,13 @@ class Settings(BaseSettings):
             raise ValueError("SUPABASE_URL must start with https://")
         if len(v) < 15:
             raise ValueError("SUPABASE_URL too short")
+        return v
+
+    @field_validator("CURRENT_DISCLAIMER_VERSION")
+    @classmethod
+    def validate_disclaimer_version(cls, v: str) -> str:
+        if not v or len(v) < 2:
+            raise ValueError("CURRENT_DISCLAIMER_VERSION must be at least 2 chars")
         return v
 
     @field_validator(
