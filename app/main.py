@@ -11,6 +11,8 @@ from app.core.logging import RequestLoggingMiddleware, configure_logging
 from app.db.session import dispose_engine
 from app.features.auth import router as auth_router
 from app.features.health import router as health_router
+from app.features.consent import router as consent_router
+from app.features.profile import router as profile_router
 
 VERSION = "1.0.0"
 
@@ -111,6 +113,8 @@ def create_app() -> FastAPI:
 
     app.include_router(health_router)
     app.include_router(auth_router)
+    app.include_router(consent_router)
+    app.include_router(profile_router)
 
     return app
 

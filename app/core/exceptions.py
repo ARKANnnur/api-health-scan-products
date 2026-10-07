@@ -65,10 +65,11 @@ class ValidationError(AppException):
     def __init__(
         self,
         message: str = "Validation failed",
+        code: str = "VALIDATION_ERROR",
         details: dict[str, Any] | None = None,
     ) -> None:
         super().__init__(
-            code="VALIDATION_ERROR",
+            code=code,
             message=message,
             status_code=422,
             details=details,

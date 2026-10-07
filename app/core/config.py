@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     ENV: str = "dev"
     CORS_ORIGINS: list[str] = []
     # Consent
-    CURRENT_DISCLAIMER_VERSION: str = "v1.0"
+    CURRENT_DISCLAIMER_VERSION: str = "1.0.0"
 
     @field_validator("SUPABASE_URL")
     @classmethod

@@ -61,10 +61,11 @@ async def require_consent(
     result = await db.execute(
         text(
             """
-            SELECT 1 FROM profiles
-            WHERE id = :uid
+            SELECT 1 FROM consent_logs
+            WHERE user_id = :uid
+              AND action = 'accepted'
               AND disclaimer_version = :version
-              AND disclaimer_accepted_at IS NOT NULL
+            LIMIT 1
         """
         ),
         {"uid": user["user_id"], "version": settings.CURRENT_DISCLAIMER_VERSION},

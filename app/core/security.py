@@ -20,6 +20,7 @@ def _get_jwks_client() -> PyJWKClient:
 
 async def decode_supabase_jwt(token: str) -> dict[str, Any]:
     settings = get_settings()
+    issuer = settings.SUPABASE_URL + "/auth/v1"
 
     try:
         unverified_header = jwt.get_unverified_header(token)
@@ -35,6 +36,7 @@ async def decode_supabase_jwt(token: str) -> dict[str, Any]:
                 settings.SUPABASE_JWT_SECRET,
                 algorithms=["HS256"],
                 audience="authenticated",
+                issuer=issuer,
             )
         else:
             client = _get_jwks_client()
@@ -44,6 +46,7 @@ async def decode_supabase_jwt(token: str) -> dict[str, Any]:
                 signing_key.key,
                 algorithms=["ES256", "RS256"],
                 audience="authenticated",
+                issuer=issuer,
             )
     except jwt.PyJWTError as exc:
         raise AuthenticationError(message="Invalid JWT") from exc
